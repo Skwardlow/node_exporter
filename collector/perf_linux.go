@@ -339,7 +339,7 @@ func NewPerfCollector(logger *slog.Logger) (Collector, error) {
 	// Configure perf profilers
 	hardwareProfilers := perf.AllHardwareProfilers
 	if *perfHwProfilerFlag != nil && len(*perfHwProfilerFlag) > 0 {
-		// hardwareProfilers = 0
+		hardwareProfilers = 0
 		for _, hf := range *perfHwProfilerFlag {
 			if v, ok := perfHardwareProfilerMap[hf]; ok {
 				hardwareProfilers |= v
@@ -348,7 +348,7 @@ func NewPerfCollector(logger *slog.Logger) (Collector, error) {
 	}
 	softwareProfilers := perf.AllSoftwareProfilers
 	if *perfSwProfilerFlag != nil && len(*perfSwProfilerFlag) > 0 {
-		// softwareProfilers = 0
+		softwareProfilers = 0
 		for _, sf := range *perfSwProfilerFlag {
 			if v, ok := perfSoftwareProfilerMap[sf]; ok {
 				softwareProfilers |= v
