@@ -81,6 +81,8 @@ var (
 		"LLReadMiss":       perf.LLReadMissProfiler,
 		"LLWriteHit":       perf.LLWriteHitProfiler,
 		"LLWriteMiss":      perf.LLWriteMissProfiler,
+		"LLC-load-misses":  perf.LLReadMissProfiler,
+		"LLC-store-misses": perf.LLWriteMissProfiler,
 		"InstrTLBReadHit":  perf.InstrTLBReadHitProfiler,
 		"InstrTLBReadMiss": perf.InstrTLBReadMissProfiler,
 		"BPUReadHit":       perf.BPUReadHitProfiler,
